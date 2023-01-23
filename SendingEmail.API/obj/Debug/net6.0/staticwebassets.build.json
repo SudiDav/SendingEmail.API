@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KWBiiL/sBwZ5/FMT/j5pzz4ksMmXuXrwbWvdXfU4FLo=",
+  "Source": "SendingEmail.API",
+  "BasePath": "_content/SendingEmail.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
