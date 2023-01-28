@@ -21,6 +21,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.MapPost("email", (EmailDto request, IEmailService emailService) =>
 {
@@ -28,11 +33,4 @@ app.MapPost("email", (EmailDto request, IEmailService emailService) =>
 
     return Results.Ok();
 });
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
 app.Run();
