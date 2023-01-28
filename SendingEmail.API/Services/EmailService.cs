@@ -15,7 +15,7 @@ public class EmailService : IEmailService
     public void SendEmail(EmailDto request)
     {
         var email = new MimeMessage(); 
-        email.From.Add(MailboxAddress.Parse(_config["EmailUsername"]));
+        email.From.Add(MailboxAddress.Parse(request.From));
         email.To.Add(MailboxAddress.Parse(request.To));
         email.Subject = request.Subject;
         email.Body = new TextPart(TextFormat.Html) {Text = request.Body};

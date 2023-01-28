@@ -21,6 +21,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.MapPost("email", (EmailDto request, IEmailService emailService) =>
+{
+    emailService.SendEmail(request);
+
+    return Results.Ok();
+});
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
